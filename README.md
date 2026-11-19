@@ -1,26 +1,37 @@
-# Turtle Homebrew tap
 
-Homebrew tap for [Turtle](https://github.com/newssourcecrawler/nsc_turtle), a local, append-only custody ledger and bounded workflow runner.
+# Turtle — Homebrew Tap
 
-## Install
+Homebrew distribution for [NSC Turtle](https://github.com/newssourcecrawler/nsc_turtle), an open-source, local-first custody ledger and bounded workflow runner.
+
+## Installation
+
+Requires macOS on Apple Silicon (arm64).
 
 ```sh
 brew install newssourcecrawler/turtle/nsc-turtle
 ```
 
-This installs two commands: `turtle` and `brownout`. It builds from source using Homebrew's Rust toolchain and the upstream `Cargo.lock` (`--locked`); there are no prebuilt bottles in this initial tap.
+Installs two executables:
+- `turtle`
+- `brownout`
 
-## Verify
+Precompiled binaries are distributed through GitHub Releases. No Rust toolchain is required for installation.
+
+## Verification
 
 ```sh
-brew list newssourcecrawler/turtle/nsc-turtle
 brew test newssourcecrawler/turtle/nsc-turtle
 ```
 
-## Source and status
+## Release
 
-- Version: `0.0.1` (no upstream release tag yet).
-- Pinned commit: `5dadf2f4c078efa396961b6725424674055f147a`.
-- Source archive checksum (SHA-256): `db9158dc0e47d5524fa2ad0247ac4a11daf9f5232616b1d5b1513b4a46b2897f`.
-- License: MIT OR Apache-2.0.
-- Upstream workspace build: passed. Homebrew installation: not yet verified.
+- Version: 0.0.1
+- Source tag: v0.0.1
+- Source commit: 5dadf2f4c078efa396961b6725424674055f147a
+- Platform: macOS arm64
+- License: MIT OR Apache-2.0
+
+Source code and release artifacts:
+https://github.com/newssourcecrawler/nsc_turtle
+
+The initial binary archive was compiled locally. Reproducible-build verification and additional platform support are not yet established.
